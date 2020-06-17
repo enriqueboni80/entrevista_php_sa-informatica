@@ -1,0 +1,25 @@
+body {
+    margin-top: 50px;
+}
+
+.glyphicon {
+    margin-right: 10px;
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.panel-body table tr td {
+    padding-left: 15px
+}
+
+.panel-body .table {
+    margin-bottom: 0px;
+}
+
+.menu-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
