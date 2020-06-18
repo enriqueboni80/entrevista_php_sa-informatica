@@ -1,14 +1,16 @@
 <?php
 
-$file = 'index.js';
+$file = './js/index.js';
 $typeConvert = $_GET["typeConvert"];
 
 /*Selecione o que vai querer converter*/
 $arrayConversao = array(
-    array("jquery" => "$('.testando').hide()", "vanillaJs" => "document.querySelector('.testando').style.display = 'none'"),
-    array("jquery" => "$('.testando').show()", "vanillaJs" => "document.querySelector('.testando').style.display = 'block'"),
-    array("jquery" => "$('.testando').html('')", "vanillaJs" => "document.querySelector('.testando').innerHTML = ''"),
-    array("jquery" => "$('.testando').html(newText)", "vanillaJs" => "document.querySelector('.testando').innerHTML = newText")
+    array("jquery" => "$('.testando')", "vanillaJs" => "document.querySelector('.testando')"),
+    array("jquery" => "$('#testando')", "vanillaJs" => "document.getElementById('testando')"),
+    array("jquery" => ".hide()", "vanillaJs" => ".style.display = 'none'"),
+    array("jquery" => ".show()", "vanillaJs" => ".style.display = 'block'"),
+    array("jquery" => ".html('')", "vanillaJs" => ".innerHTML = ''"),
+    array("jquery" => ".html(newText)", "vanillaJs" => ".innerHTML = newText")
 );
 
 foreach ($arrayConversao as $key => $item) {
