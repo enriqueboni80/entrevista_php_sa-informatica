@@ -13,19 +13,22 @@
 <body>
     <div id="conteudo">
         <?php
+        //não esquecer de ativar
         $form = new UI_Comp_Formulario(true);
-        $fields = array(
-            array("label" => "Data", "name" => "data", "id" => "data", "placeholder" => "mm-dd-yyyy"),
-            array("label" => "Texto", "name" => "texto", "id" => "texto", "placeholder" => "Texto de até x caracteres")
+        $formParams = array(
+            array("type" => "text", "label" => "Data", "name" => "date",  "id" => "date", "placeholder" => "mm-dd-yyyy"),
+            array("type" => "text", "label" => "Texto", "name" => "text",  "id" => "text", "placeholder" => "Text"),
+            array("type" => "checkbox", "label" => "Texto", "name" => "text",  "id" => "text", "placeholder" => "Text"),
+            array("type" => "textarea", "label" => "Texto Grande", "name" => "bigtext",  "id" => "bigtext", "placeholder" => "bigtext")
         );
-        if ($_POST['data'] || $_POST['texto']) {
-            $form->validate($_POST);
+        if ($_POST['date'] || $_POST['text']) {
+            echo $form->validate($_POST);
         }
         ?>
         <div>
             <form action="" id="myForm" method="post" onsubmit="return checkForm(this, <?php echo $form->validateScript ?>)">
                 <div>
-                    <?php $form->renderer($fields); ?>
+                    <?php $form->renderer($formParams); ?>
                     <button type="submit">enviar</button>
                 </div>
             </form>

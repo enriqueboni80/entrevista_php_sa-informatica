@@ -12,21 +12,40 @@ class UI_Comp_Formulario
 
     function validate($post)
     {
-        if ($post['data'] || $post['texto']) {
-            echo "true";
-        } else {
-            echo "false";
+        if ($post['date'] == "" || $post['text'] == "") {
+            return false;
         }
+
+        $date = $post['date'];
+        $text = $post['text'];
+
+        if (!preg_match('/^(\d{2})-(\d{2})-(\d{4})$/', $date)) {
+            return false;
+        }
+
+        if (!preg_match("/^[a-z ]{1,144}$/", $text)) {
+            return false;
+        }
+
+        return true;
     }
 
-    function renderer($params = [])
+    function renderer($params = false)
     {
-        foreach ($params as $param) {
-            echo "<label for=" . $param['name'] . ">" . $param['label'] . ": </label>";
-            echo "<input type='text' 
-            id=" . $param['id'] . " 
-            name=" . $param['name'] . " 
-            placeholder=" . $param['placeholder'] . " >";
+        if ($params) {
+            $inputs = $params;
+        }
+        foreach ($inputs as $input) {
+            echo "<label for=" . $input['name'] . ">" . $input['label'] . ": </label>";
+            if ($input['type'] == "text") {
+                echo "<input type='text' id=" . $input['id'] . " " . "name=" . $input['name'] . " " . " placeholder=" . $input['placeholder'] . " >";
+            }
+            if ($input['type'] == "textarea") {
+                echo "<textarea id=" . $input['id'] . " " . "name=" . $input['name'] . "></textarea>";
+            }
+            if ($input['type'] == "checkbox") {
+                echo "<input type='checkbox' id='scales' name='scales' checked>";
+            }
         };
     }
 }
