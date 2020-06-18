@@ -18,7 +18,7 @@
         $formParams = array(
             array("type" => "text", "label" => "Data", "name" => "date",  "id" => "date", "placeholder" => "mm-dd-yyyy"),
             array("type" => "text", "label" => "Texto", "name" => "text",  "id" => "text", "placeholder" => "Text"),
-            array("type" => "checkbox", "label" => "Texto", "name" => "text",  "id" => "text", "placeholder" => "Text"),
+            array("type" => "checkbox", "label" => "Checkbox", "name" => "checkbox",  "id" => "checkbox", "placeholder" => "Text"),
             array("type" => "textarea", "label" => "Texto Grande", "name" => "bigtext",  "id" => "bigtext", "placeholder" => "bigtext")
         );
         if ($_POST['date'] || $_POST['text']) {

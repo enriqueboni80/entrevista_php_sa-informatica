@@ -44,7 +44,7 @@ class UI_Comp_Formulario
                 echo "<textarea id=" . $input['id'] . " " . "name=" . $input['name'] . "></textarea>";
             }
             if ($input['type'] == "checkbox") {
-                echo "<input type='checkbox' id='scales' name='scales' checked>";
+                echo "<input type='checkbox' id=" . $input['id'] . " " . "name=" . $input['name'] . ">";
             }
         };
     }
