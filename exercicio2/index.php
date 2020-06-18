@@ -14,7 +14,7 @@
     <div id="conteudo">
         <?php
         //não esquecer de ativar
-        $form = new UI_Comp_Formulario(true);
+        $form = new UI_Comp_Formulario(false);
         $formParams = array(
             array("type" => "text", "label" => "Data", "name" => "date",  "id" => "date", "placeholder" => "mm-dd-yyyy"),
             array("type" => "text", "label" => "Texto", "name" => "text",  "id" => "text", "placeholder" => "Text"),

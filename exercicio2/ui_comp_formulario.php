@@ -18,12 +18,17 @@ class UI_Comp_Formulario
 
         $date = $post['date'];
         $text = $post['text'];
+        $bigText = $post['bigtext'];
 
         if (!preg_match('/^(\d{2})-(\d{2})-(\d{4})$/', $date)) {
             return false;
         }
 
         if (!preg_match("/^[a-z ]{1,144}$/", $text)) {
+            return false;
+        }
+
+        if (!preg_match("/[^\W_]{1,255}$/", $bigText)) {
             return false;
         }
 
