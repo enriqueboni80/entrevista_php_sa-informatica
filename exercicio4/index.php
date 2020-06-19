@@ -12,7 +12,6 @@ $formParams = array(
 if ($_POST['date'] && $_POST['text'] && $_POST['bigtext']) {
     if ($form->validate($_POST)) {
         echo "<script>alert('true : Validado com sucesso')</script>";
-        echo "<script>teste();</script>";
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=' . $_SERVER['REQUEST_URI'] . '">';
         exit;
     } else {
