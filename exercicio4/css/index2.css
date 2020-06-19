@@ -1,0 +1,27 @@
+body {
+    background-color:  #e6e6e6
+}
+
+header {
+    background-color: #47476b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.section-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.form-box{
+    background-color: white; 
+    padding: 40px;
+}

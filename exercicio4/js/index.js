@@ -26,3 +26,7 @@ function checkForm(form, validate = false) {
         return true
     }
 }
+
+teste = () => {
+    alert('que blz')
+}
