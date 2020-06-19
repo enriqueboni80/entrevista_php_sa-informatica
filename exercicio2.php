@@ -9,7 +9,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <b>R: </b>
+                    <b>R: </b>Tenho mais afinidade pelo Boostrap porque venho trabalhando a mais tempo com ele, 
+                    mas dâ pra usar qualquer uma ou até mesmo mesclar componentes entre elas.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

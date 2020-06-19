@@ -1,26 +1,26 @@
 desapear = () => {
-    $('.testando').hide();
+    document.querySelector('.testando').style.display = 'none';
 }
 apear = () => {
-    $('.testando').show();
+    document.querySelector('.testando').style.display = 'block';
 }
 cleanContent = () => {
-    $('.testando').html('');
+    document.querySelector('.testando').innerHTML = '';
 }
 newContent = (newText) => {
-    $('.testando').html(newText);
+    document.querySelector('.testando').innerHTML = newText;
 }
 remove = () => {
-    $('.testando').remove();
+    document.querySelector('.testando').remove();
 }
 
 
 soParaTestar = () => {
-    $('#testando').hide();
-    $('#testando').show();
-    $('#testando').html('');
-    $('#testando').html(newText);
-    $('#testando').remove();
+    document.getElementById('testando').style.display = 'none';
+    document.getElementById('testando').style.display = 'block';
+    document.getElementById('testando').innerHTML = '';
+    document.getElementById('testando').innerHTML = newText;
+    document.getElementById('testando').remove();
 }
 
 
